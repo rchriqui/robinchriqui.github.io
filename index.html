@@ -70,6 +70,143 @@ I'm always excited to collaborate on projects that challenge conventional thinki
                     </div><!--//section-inner-->                 
                 </section><!--//section-->
     
+                <section class="ai-clone section">
+                    <div class="section-inner shadow-sm rounded" id="ai-clone-section">
+                        <div class="ai-clone-content">
+                            <div class="ai-clone-badge">
+                                <span><i class="fas fa-circle-notch fa-spin"></i> Live</span>
+                            </div>
+                            <div class="ai-clone-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h2 class="ai-clone-title">I built an AI clone of myself</h2>
+                            <p class="ai-clone-desc">
+                                Curious about my background, experience, or what I'm working on?<br>
+                                <strong>Ask my digital twin</strong> — it knows my career, projects, and skills.
+                            </p>
+                            <div class="ai-clone-suggestions">
+                                <span>"What's your experience in ML?"</span>
+                                <span>"Which tools do you use?"</span>
+                                <span>"Are you open to opportunities?"</span>
+                            </div>
+                            <button class="btn ai-clone-btn" onclick="document.getElementById('chat-toggle').click()">
+                                <i class="fas fa-comments"></i> Chat with my AI clone
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <style>
+                    #ai-clone-section {
+                        background: linear-gradient(135deg, #f0fef0 0%, #e8f5e9 100%);
+                        border-left: 4px solid #54ba4e;
+                        text-align: center;
+                        padding: 32px 24px;
+                    }
+
+                    body.dark-mode #ai-clone-section {
+                        background: linear-gradient(135deg, #1a2e1a 0%, #1e3320 100%);
+                    }
+
+                    .ai-clone-badge {
+                        margin-bottom: 14px;
+                    }
+
+                    .ai-clone-badge span {
+                        background: #54ba4e;
+                        color: #fff;
+                        font-size: 11px;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        padding: 4px 12px;
+                        border-radius: 20px;
+                    }
+
+                    .ai-clone-icon {
+                        font-size: 48px;
+                        color: #54ba4e;
+                        margin-bottom: 12px;
+                        line-height: 1;
+                    }
+
+                    .ai-clone-title {
+                        font-size: 22px;
+                        font-weight: 700;
+                        color: #333;
+                        margin-bottom: 10px;
+                    }
+
+                    body.dark-mode .ai-clone-title {
+                        color: #eee;
+                    }
+
+                    .ai-clone-desc {
+                        color: #555;
+                        font-size: 15px;
+                        margin-bottom: 18px;
+                        line-height: 1.6;
+                    }
+
+                    body.dark-mode .ai-clone-desc {
+                        color: #bbb;
+                    }
+
+                    .ai-clone-suggestions {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                        justify-content: center;
+                        margin-bottom: 22px;
+                    }
+
+                    .ai-clone-suggestions span {
+                        background: #fff;
+                        border: 1px solid #c8e6c9;
+                        color: #3d9e38;
+                        font-size: 12px;
+                        padding: 5px 12px;
+                        border-radius: 20px;
+                        font-style: italic;
+                        cursor: pointer;
+                        transition: background 0.15s;
+                    }
+
+                    body.dark-mode .ai-clone-suggestions span {
+                        background: #2b3d2b;
+                        border-color: #3d6e3d;
+                        color: #7ecb7a;
+                    }
+
+                    .ai-clone-suggestions span:hover {
+                        background: #e8f5e9;
+                    }
+
+                    .ai-clone-btn {
+                        background: #54ba4e;
+                        color: #fff;
+                        border: none;
+                        padding: 12px 28px;
+                        border-radius: 30px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        box-shadow: 0 4px 14px rgba(84,186,78,0.35);
+                        transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+                    }
+
+                    .ai-clone-btn:hover {
+                        background: #3d9e38;
+                        transform: translateY(-2px);
+                        box-shadow: 0 6px 20px rgba(84,186,78,0.45);
+                        color: #fff;
+                    }
+
+                    .ai-clone-btn i {
+                        margin-right: 6px;
+                    }
+                </style>
+
                <section class="latest section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Latest Projects</h2>
@@ -127,8 +264,16 @@ I'm always excited to collaborate on projects that challenge conventional thinki
                         <h2 class="heading">Work Experience</h2>
                         <div class="content">
                             <div class="item">
-                                <h3 class="title">Data Scientist- <span class="place"><a href="#">Asensus Surgical</a></span> <span class="year">(2021 - Present)</span></h3>
-                                <p>At Asensus Surgical, I lead data-driven projects and guide a team to leverage data for impactful solutions. We design, develop, and deploy machine learning and deep learning models using a variety of tools including Python, pandas, Scikit-learn, TensorFlow, and PyTorch. I also specialize in utilizing Google Cloud Platform for creating scalable, cloud-based applications, and comprehensive analytical systems. These efforts drive significant business improvements across various operational aspects.</p>
+                                <h3 class="title">Data Scientist / Applied AI Engineer - <span class="place"><a href="#">Asensus Surgical</a></span> <span class="year">(2021 - Present)</span></h3>
+                                <p>Working on applied AI systems combining Generative AI, multi-agent architectures and data science for intelligent applications.</p>
+                                <ul>
+                                    <li>Designed real-time multi-agent systems orchestrating multiple LLMs for complex reasoning and user interaction</li>
+                                    <li>Built RAG pipelines integrating internal knowledge bases and structured datasets</li>
+                                    <li>Performed LLM fine-tuning and evaluation to improve task-specific performance</li>
+                                    <li>Developed machine learning models for prediction, classification and clustering on structured datasets</li>
+                                    <li>Benchmarked frontier and open-source models to optimize accuracy, latency and cost</li>
+                                </ul>
+                                <p class="tech-stack"><strong>Tech:</strong> Python | PyTorch | LLMs | RAG | Multi-agent systems | HuggingFace | Machine Learning</p>
                             </div><!--//item-->
                             <div class="item">
                                 <h3 class="title">Data Scientist Instructor - <span class="place"><a href="#">Openclassrooms</a></span> <span class="year">(2021 - Present)</span></h3>
@@ -168,45 +313,96 @@ I'm always excited to collaborate on projects that challenge conventional thinki
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading">Skills</h2>
                         <div class="content">
-                            <p class="intro">
-                                As a data scientist with four years of experience, I specialize in using Python, R, and SQL to bring clarity to complex data. My focus lies in data visualization, machine learning, and statistical analysis. For more details, kindly check my LinkedIn or Github profiles.</p>
-                            
-                            <div class="skillset">
-                               
-                                <div class="item">
-                                    <h3 class="level-title">Python - Data Science<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
+                            <p class="intro">6 years building data-driven and AI systems — from classical ML to production-grade LLM applications and multi-agent architectures.</p>
 
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 96%" aria-valuenow="96"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                               
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title"> SQL <span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 94%" aria-valuenow="94"  aria-valuemin="0" aria-valuemax="94"></div>
-									</div><!--//level-bar-->                                   
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">HTML5, CSS3, Javascript<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Expert</span></h3>
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 93%" aria-valuenow="93"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                                  
-                                </div><!--//item-->
-                                
-                                <div class="item">
-                                    <h3 class="level-title">Cloud GCP, AWS<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="You can use the tooltip to explain more about your skill level..."><i class="fas fa-info-circle"></i>Pro</span></h3>
-                                    <div class="level-bar progress">
-									    <div class="progress-bar level-bar-inner" role="progressbar" style="width: 86%" aria-valuenow="86"  aria-valuemin="0" aria-valuemax="96"></div>
-									</div><!--//level-bar-->                                  
-                                </div><!--//item-->
-                                
-                                <p><a class="more-link" href="https://github.com/Robinrob92"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p> 
-                            </div>              
-                        </div><!--//content-->  
-                    </div><!--//section-inner-->                 
+                            <div class="skillset">
+
+                                <div class="skill-group">
+                                    <h3 class="skill-group-title"><i class="fas fa-brain"></i> Generative AI</h3>
+                                    <div class="skill-tags">
+                                        <span>LLMs</span>
+                                        <span>RAG</span>
+                                        <span>Fine-tuning</span>
+                                        <span>Multi-agent systems</span>
+                                        <span>Prompt engineering</span>
+                                        <span>LLM evaluation</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-group">
+                                    <h3 class="skill-group-title"><i class="fas fa-chart-line"></i> ML & Data Science</h3>
+                                    <div class="skill-tags">
+                                        <span>PyTorch</span>
+                                        <span>Scikit-learn</span>
+                                        <span>Pandas</span>
+                                        <span>Prediction</span>
+                                        <span>Classification</span>
+                                        <span>Clustering</span>
+                                        <span>Statistical analysis</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-group">
+                                    <h3 class="skill-group-title"><i class="fas fa-cloud"></i> Cloud & MLOps</h3>
+                                    <div class="skill-tags">
+                                        <span>GCP</span>
+                                        <span>AWS</span>
+                                        <span>Vertex AI</span>
+                                        <span>Docker</span>
+                                        <span>HuggingFace</span>
+                                    </div>
+                                </div>
+
+                                <div class="skill-group">
+                                    <h3 class="skill-group-title"><i class="fas fa-code"></i> Languages</h3>
+                                    <div class="skill-tags">
+                                        <span>Python</span>
+                                        <span>SQL</span>
+                                    </div>
+                                </div>
+
+                                <p><a class="more-link" href="https://github.com/Robinrob92"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p>
+                            </div>
+                        </div><!--//content-->
+                    </div><!--//section-inner-->
                 </aside><!--//section-->
+
+                <style>
+                    .skill-group {
+                        margin-bottom: 16px;
+                    }
+                    .skill-group-title {
+                        font-size: 13px;
+                        text-transform: uppercase;
+                        letter-spacing: 0.5px;
+                        margin-bottom: 8px;
+                        color: #778492;
+                    }
+                    .skill-group-title i {
+                        margin-right: 5px;
+                        color: #3AAA64;
+                    }
+                    .skill-tags {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 6px;
+                        margin-bottom: 4px;
+                    }
+                    .skill-tags span {
+                        background: #f0f3f4;
+                        color: #545e69;
+                        font-size: 12px;
+                        font-weight: 600;
+                        padding: 4px 10px;
+                        border-radius: 4px;
+                        border: 1px solid #e0e4e8;
+                    }
+                    body.dark-mode .skill-tags span {
+                        background: #2e3338;
+                        color: #adb5bd;
+                        border-color: #3a4048;
+                    }
+                </style>
                 
                 <aside class="testimonials aside section">
                     <div class="section-inner shadow-sm rounded">
@@ -279,12 +475,28 @@ I'm always excited to collaborate on projects that challenge conventional thinki
         </div><!--//container-->
     </footer><!--//footer-->
  
+    <style>
+        .tech-stack {
+            margin-top: 10px;
+        }
+        .experience .content .item ul {
+            padding-left: 18px;
+            margin-bottom: 8px;
+        }
+        .experience .content .item ul li {
+            margin-bottom: 4px;
+        }
+    </style>
+
     <!-- Chatbot Widget -->
     <div id="chat-widget">
+        <div id="chat-widget-wrapper">
+        <span id="chat-label">💬 Talk to my AI clone</span>
         <button id="chat-toggle" aria-label="Chat with my AI clone" title="Chat with my AI clone">
             <span id="chat-icon-open"><i class="fas fa-robot"></i></span>
             <span id="chat-icon-close" style="display:none;"><i class="fas fa-times"></i></span>
         </button>
+        </div>
         <div id="chat-panel">
             <div id="chat-panel-header">
                 <div id="chat-panel-title">
@@ -318,26 +530,62 @@ I'm always excited to collaborate on projects that challenge conventional thinki
             font-family: 'Lato', sans-serif;
         }
 
+        #chat-widget-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 8px;
+        }
+
+        #chat-label {
+            background: #333;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 20px;
+            white-space: nowrap;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            animation: labelPop 0.4s ease 1s both;
+            pointer-events: none;
+        }
+
+        #chat-label.hidden {
+            display: none;
+        }
+
+        @keyframes labelPop {
+            from { opacity: 0; transform: translateX(10px); }
+            to   { opacity: 1; transform: translateX(0); }
+        }
+
         #chat-toggle {
-            width: 56px;
-            height: 56px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             background: #54ba4e;
             border: none;
             cursor: pointer;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 16px rgba(84,186,78,0.5);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
+            font-size: 24px;
             color: #fff;
             transition: background 0.2s, transform 0.2s;
-            margin-left: auto;
+            animation: pulse 2.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%   { box-shadow: 0 0 0 0 rgba(84,186,78,0.5); }
+            70%  { box-shadow: 0 0 0 12px rgba(84,186,78,0); }
+            100% { box-shadow: 0 0 0 0 rgba(84,186,78,0); }
         }
 
         #chat-toggle:hover {
             background: #3d9e38;
             transform: scale(1.08);
+            animation: none;
         }
 
         #chat-panel {
@@ -441,12 +689,14 @@ I'm always excited to collaborate on projects that challenge conventional thinki
             const iconClose = document.getElementById('chat-icon-close');
             const closeBtn = document.getElementById('chat-close-btn');
             const iframe = document.getElementById('chat-iframe');
+            const label = document.getElementById('chat-label');
             let loaded = false;
 
             function openChat() {
                 panel.classList.add('open');
                 iconOpen.style.display = 'none';
                 iconClose.style.display = 'inline';
+                label.classList.add('hidden');
                 if (!loaded) {
                     iframe.src = iframe.dataset.src;
                     loaded = true;
@@ -457,6 +707,7 @@ I'm always excited to collaborate on projects that challenge conventional thinki
                 panel.classList.remove('open');
                 iconOpen.style.display = 'inline';
                 iconClose.style.display = 'none';
+                label.classList.remove('hidden');
             }
 
             toggle.addEventListener('click', function () {
@@ -464,6 +715,9 @@ I'm always excited to collaborate on projects that challenge conventional thinki
             });
 
             closeBtn.addEventListener('click', closeChat);
+
+            // Hide label automatically after 6s
+            setTimeout(() => label.classList.add('hidden'), 6000);
         })();
     </script>
 
