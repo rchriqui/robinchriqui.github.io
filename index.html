@@ -279,6 +279,194 @@ I'm always excited to collaborate on projects that challenge conventional thinki
         </div><!--//container-->
     </footer><!--//footer-->
  
+    <!-- Chatbot Widget -->
+    <div id="chat-widget">
+        <button id="chat-toggle" aria-label="Chat with my AI clone" title="Chat with my AI clone">
+            <span id="chat-icon-open"><i class="fas fa-robot"></i></span>
+            <span id="chat-icon-close" style="display:none;"><i class="fas fa-times"></i></span>
+        </button>
+        <div id="chat-panel">
+            <div id="chat-panel-header">
+                <div id="chat-panel-title">
+                    <i class="fas fa-robot"></i>
+                    <div>
+                        <strong>Ask my AI clone</strong>
+                        <small>Powered by Robin's digital twin</small>
+                    </div>
+                </div>
+                <button id="chat-close-btn" aria-label="Close chat"><i class="fas fa-times"></i></button>
+            </div>
+            <div id="chat-panel-body">
+                <iframe
+                    id="chat-iframe"
+                    src=""
+                    data-src="https://robinrob92-career-conversation.hf.space"
+                    title="Robin Chriqui AI Clone"
+                    allow="microphone"
+                    frameborder="0"
+                ></iframe>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        #chat-widget {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            font-family: 'Lato', sans-serif;
+        }
+
+        #chat-toggle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: #54ba4e;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #fff;
+            transition: background 0.2s, transform 0.2s;
+            margin-left: auto;
+        }
+
+        #chat-toggle:hover {
+            background: #3d9e38;
+            transform: scale(1.08);
+        }
+
+        #chat-panel {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            bottom: 68px;
+            right: 0;
+            width: 380px;
+            height: 560px;
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            overflow: hidden;
+            animation: chatSlideIn 0.25s ease;
+        }
+
+        #chat-panel.open {
+            display: flex;
+        }
+
+        @keyframes chatSlideIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        #chat-panel-header {
+            background: #54ba4e;
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        #chat-panel-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 18px;
+        }
+
+        #chat-panel-title strong {
+            display: block;
+            font-size: 14px;
+            line-height: 1.2;
+        }
+
+        #chat-panel-title small {
+            font-size: 11px;
+            opacity: 0.85;
+        }
+
+        #chat-close-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 4px 6px;
+            border-radius: 50%;
+            line-height: 1;
+            transition: background 0.15s;
+        }
+
+        #chat-close-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        #chat-panel-body {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        #chat-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Dark mode compatibility */
+        body.dark-mode #chat-panel {
+            background: #2b2b2b;
+        }
+
+        @media (max-width: 480px) {
+            #chat-panel {
+                width: calc(100vw - 32px);
+                right: 0;
+                bottom: 68px;
+            }
+        }
+    </style>
+
+    <script>
+        (function () {
+            const toggle = document.getElementById('chat-toggle');
+            const panel = document.getElementById('chat-panel');
+            const iconOpen = document.getElementById('chat-icon-open');
+            const iconClose = document.getElementById('chat-icon-close');
+            const closeBtn = document.getElementById('chat-close-btn');
+            const iframe = document.getElementById('chat-iframe');
+            let loaded = false;
+
+            function openChat() {
+                panel.classList.add('open');
+                iconOpen.style.display = 'none';
+                iconClose.style.display = 'inline';
+                if (!loaded) {
+                    iframe.src = iframe.dataset.src;
+                    loaded = true;
+                }
+            }
+
+            function closeChat() {
+                panel.classList.remove('open');
+                iconOpen.style.display = 'inline';
+                iconClose.style.display = 'none';
+            }
+
+            toggle.addEventListener('click', function () {
+                panel.classList.contains('open') ? closeChat() : openChat();
+            });
+
+            closeBtn.addEventListener('click', closeChat);
+        })();
+    </script>
+
     <!-- Javascript -->          
     <script type="text/javascript" src="assets/plugins/popper.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
